@@ -39,6 +39,13 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.btSub = new System.Windows.Forms.Button();
+            this.btMul = new System.Windows.Forms.Button();
+            this.btMod = new System.Windows.Forms.Button();
+            this.btDiv = new System.Windows.Forms.Button();
+            this.btEq = new System.Windows.Forms.Button();
+            this.lblNum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNumber
@@ -161,11 +168,88 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // btAdd
+            // 
+            this.btAdd.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAdd.Location = new System.Drawing.Point(289, 179);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(40, 35);
+            this.btAdd.TabIndex = 11;
+            this.btAdd.Text = "+";
+            this.btAdd.UseVisualStyleBackColor = true;
+            // 
+            // btSub
+            // 
+            this.btSub.Font = new System.Drawing.Font("Onyx", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btSub.Location = new System.Drawing.Point(289, 244);
+            this.btSub.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.btSub.Name = "btSub";
+            this.btSub.Size = new System.Drawing.Size(40, 35);
+            this.btSub.TabIndex = 12;
+            this.btSub.Text = "-";
+            this.btSub.UseVisualStyleBackColor = true;
+            // 
+            // btMul
+            // 
+            this.btMul.Font = new System.Drawing.Font("Onyx", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btMul.Location = new System.Drawing.Point(289, 119);
+            this.btMul.Name = "btMul";
+            this.btMul.Size = new System.Drawing.Size(40, 35);
+            this.btMul.TabIndex = 13;
+            this.btMul.Text = "*";
+            this.btMul.UseVisualStyleBackColor = true;
+            // 
+            // btMod
+            // 
+            this.btMod.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMod.Location = new System.Drawing.Point(348, 179);
+            this.btMod.Name = "btMod";
+            this.btMod.Size = new System.Drawing.Size(40, 35);
+            this.btMod.TabIndex = 14;
+            this.btMod.Text = "%";
+            this.btMod.UseVisualStyleBackColor = true;
+            // 
+            // btDiv
+            // 
+            this.btDiv.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDiv.Location = new System.Drawing.Point(348, 119);
+            this.btDiv.Name = "btDiv";
+            this.btDiv.Size = new System.Drawing.Size(40, 35);
+            this.btDiv.TabIndex = 15;
+            this.btDiv.Text = "\\";
+            this.btDiv.UseVisualStyleBackColor = true;
+            // 
+            // btEq
+            // 
+            this.btEq.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEq.Location = new System.Drawing.Point(163, 244);
+            this.btEq.Name = "btEq";
+            this.btEq.Size = new System.Drawing.Size(103, 35);
+            this.btEq.TabIndex = 16;
+            this.btEq.Text = "=";
+            this.btEq.UseVisualStyleBackColor = true;
+            // 
+            // lblNum
+            // 
+            this.lblNum.AutoSize = true;
+            this.lblNum.Location = new System.Drawing.Point(40, 35);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(35, 13);
+            this.lblNum.TabIndex = 17;
+            this.lblNum.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 395);
+            this.Controls.Add(this.lblNum);
+            this.Controls.Add(this.btEq);
+            this.Controls.Add(this.btDiv);
+            this.Controls.Add(this.btMod);
+            this.Controls.Add(this.btMul);
+            this.Controls.Add(this.btSub);
+            this.Controls.Add(this.btAdd);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -201,6 +285,13 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Button btSub;
+        private System.Windows.Forms.Button btMul;
+        private System.Windows.Forms.Button btMod;
+        private System.Windows.Forms.Button btDiv;
+        private System.Windows.Forms.Button btEq;
+        private System.Windows.Forms.Label lblNum;
     }
 }
 
