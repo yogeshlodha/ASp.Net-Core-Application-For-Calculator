@@ -46,6 +46,7 @@
             this.btDiv = new System.Windows.Forms.Button();
             this.btEq = new System.Windows.Forms.Button();
             this.lblNum = new System.Windows.Forms.Label();
+            this.btClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNumber
@@ -177,6 +178,7 @@
             this.btAdd.TabIndex = 11;
             this.btAdd.Text = "+";
             this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btSub
             // 
@@ -188,6 +190,7 @@
             this.btSub.TabIndex = 12;
             this.btSub.Text = "-";
             this.btSub.UseVisualStyleBackColor = true;
+            this.btSub.Click += new System.EventHandler(this.btSub_Click);
             // 
             // btMul
             // 
@@ -198,6 +201,7 @@
             this.btMul.TabIndex = 13;
             this.btMul.Text = "*";
             this.btMul.UseVisualStyleBackColor = true;
+            this.btMul.Click += new System.EventHandler(this.btMul_Click);
             // 
             // btMod
             // 
@@ -208,16 +212,18 @@
             this.btMod.TabIndex = 14;
             this.btMod.Text = "%";
             this.btMod.UseVisualStyleBackColor = true;
+            this.btMod.Click += new System.EventHandler(this.btMod_Click);
             // 
             // btDiv
             // 
             this.btDiv.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDiv.Location = new System.Drawing.Point(348, 119);
+            this.btDiv.Location = new System.Drawing.Point(348, 118);
             this.btDiv.Name = "btDiv";
             this.btDiv.Size = new System.Drawing.Size(40, 35);
             this.btDiv.TabIndex = 15;
             this.btDiv.Text = "\\";
             this.btDiv.UseVisualStyleBackColor = true;
+            this.btDiv.Click += new System.EventHandler(this.btDiv_Click);
             // 
             // btEq
             // 
@@ -228,21 +234,34 @@
             this.btEq.TabIndex = 16;
             this.btEq.Text = "=";
             this.btEq.UseVisualStyleBackColor = true;
+            this.btEq.Click += new System.EventHandler(this.btEq_Click);
             // 
             // lblNum
             // 
             this.lblNum.AutoSize = true;
             this.lblNum.Location = new System.Drawing.Point(40, 35);
             this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(35, 13);
+            this.lblNum.Size = new System.Drawing.Size(119, 13);
             this.lblNum.TabIndex = 17;
-            this.lblNum.Text = "label1";
+            this.lblNum.Text = "wel-come to simple calc";
+            // 
+            // btClear
+            // 
+            this.btClear.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClear.Location = new System.Drawing.Point(348, 243);
+            this.btClear.Name = "btClear";
+            this.btClear.Size = new System.Drawing.Size(40, 35);
+            this.btClear.TabIndex = 18;
+            this.btClear.Text = "C";
+            this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 395);
+            this.Controls.Add(this.btClear);
             this.Controls.Add(this.lblNum);
             this.Controls.Add(this.btEq);
             this.Controls.Add(this.btDiv);
@@ -292,6 +311,7 @@
         private System.Windows.Forms.Button btDiv;
         private System.Windows.Forms.Button btEq;
         private System.Windows.Forms.Label lblNum;
+        private System.Windows.Forms.Button btClear;
     }
 }
 

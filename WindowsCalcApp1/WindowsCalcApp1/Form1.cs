@@ -16,6 +16,7 @@ namespace WindowsCalcApp1
             InitializeComponent();
         }
         StringBuilder strNum = new StringBuilder("");
+        StringBuilder Operator = new StringBuilder("");
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -99,6 +100,112 @@ namespace WindowsCalcApp1
             strNum.Append(string.Concat(txtNumber.Text, "0"));
             txtNumber.Text = strNum.ToString();
             txtNumber.Text = strNum.ToString();
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Operator.ToString()))
+            {
+                EqualOperation();
+            }
+                lblNum.Text = txtNumber.Text;
+                txtNumber.Text = "";
+                Operator.Clear();
+                Operator.Append("+");
+            
+        }
+        private void btSub_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Operator.ToString()))
+            {
+                EqualOperation();
+            }
+                lblNum.Text = txtNumber.Text;
+                txtNumber.Text = "";
+                Operator.Clear();
+                Operator.Append("-");
+            
+        }
+        private void btDiv_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Operator.ToString()))
+            {
+                EqualOperation();
+            }
+            lblNum.Text = txtNumber.Text;
+            txtNumber.Text = "";
+            Operator.Clear();
+            Operator.Append("/");
+
+        }
+
+        private void btMod_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Operator.ToString()))
+            {
+                EqualOperation();
+            }
+            lblNum.Text = txtNumber.Text;
+            txtNumber.Text = "";
+            Operator.Clear();
+            Operator.Append("%");
+
+        }
+        private void btMul_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Operator.ToString()))
+            {
+                EqualOperation();
+            }
+            lblNum.Text = txtNumber.Text;
+            txtNumber.Text = "";
+            Operator.Clear();
+            Operator.Append("*");
+
+        }
+        private void btEq_Click(object sender, EventArgs e)
+        {
+            EqualOperation();
+        }
+        private void EqualOperation()
+        {
+
+            if (!string.IsNullOrWhiteSpace(Operator.ToString()) && !string.IsNullOrWhiteSpace(lblNum.Text) && !string.IsNullOrWhiteSpace(txtNumber.Text))
+            {
+                switch (Operator.ToString())
+                {
+                    case "+":
+                        txtNumber.Text = (Convert.ToDecimal(lblNum.Text) + Convert.ToDecimal(txtNumber.Text)).ToString();
+                        lblNum.Text = "";
+                        break;
+                    case "-":
+                        txtNumber.Text = (Convert.ToDecimal(lblNum.Text) - Convert.ToDecimal(txtNumber.Text)).ToString();
+                        lblNum.Text = "";
+                        break;
+                    case "*":
+                        txtNumber.Text = (Convert.ToDecimal(lblNum.Text) * Convert.ToDecimal(txtNumber.Text)).ToString();
+                        lblNum.Text = "";
+                        break;
+                    case "/":
+                        txtNumber.Text = (Convert.ToDecimal(lblNum.Text) / Convert.ToDecimal(txtNumber.Text)).ToString();
+                        lblNum.Text = "";
+                        break;
+                    case "%":
+                        txtNumber.Text = (Convert.ToDecimal(lblNum.Text) % Convert.ToDecimal(txtNumber.Text)).ToString();
+                        lblNum.Text = "";
+                        break;
+                }
+
+
+            }
+        }
+
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            Operator.Clear();
+            txtNumber.Text = "";
+            strNum.Clear();
+            lblNum.Text = "";
         }
     }
 }
